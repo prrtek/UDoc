@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+:root {
+  --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+body {
+  margin: 0;
+  background: var(--bg-gradient);
+  min-height: 100vh;
+  color: #f8fafc;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  overflow: hidden;
+}
+
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Medical Typography */
+.prose-medical {
+  @apply text-slate-300;
+}
+
+.prose-medical h2 {
+  @apply text-lg font-bold mt-6 mb-3 flex items-center gap-2;
+}
+
+.prose-medical h2:nth-of-type(1) { @apply text-amber-400; }
+.prose-medical h2:nth-of-type(2) { @apply text-emerald-400; }
+.prose-medical h2:nth-of-type(3) { @apply text-blue-400; }
+
+.prose-medical ul {
+  @apply space-y-2 list-disc pl-5;
+}
+
+.prose-medical li {
+  @apply text-slate-300;
+}
+
+.prose-medical strong {
+  @apply text-white font-semibold;
+}
+
