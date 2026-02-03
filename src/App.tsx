@@ -14,7 +14,7 @@ const App: React.FC = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '1',
-      text: "Hello! I'm UDoc, your AI health assistant. How can I help you today? Please describe your symptoms.",
+      text: "Namaste! Main UDoc hoon, aapka AI health assistant. Main aapki kaise madad kar sakta hoon? Apne symptoms batayein (e.g., Mujhe sar dard aur thoda fever hai).",
       sender: 'bot',
       timestamp: new Date(),
     },
@@ -150,7 +150,7 @@ const App: React.FC = () => {
           value={input}
           onChange={(e) => setInput(e.target.value)}
           onKeyDown={(e) => e.key === 'Enter' && handleSend()}
-          placeholder="Type your symptoms (e.g. 'I have a headache and fatigue')..."
+          placeholder="Apne symptoms likhein (e.g. 'Mujhe sar dard aur bukhaar hai')..."
           className="w-full bg-white/5 border border-white/10 text-white pl-12 pr-16 py-5 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition-all placeholder:text-slate-500 shadow-xl"
         />
         <button
